@@ -1,0 +1,40 @@
+<%- include('partials/header') -%>
+<body>
+    <img class="background-img" src="texas.png">
+    <div class="logo">
+        <div class="title-1">
+            <h4>APEX</h4>
+            <h5>POWER</h5>
+        </div>
+        <img class="logo-img" src="logo.png" alt="logo-img">
+        <div class="title-2">
+            <h4>TEXAS</h4>
+            <h5>WASH</h5>
+        </div>
+    </div>
+    <h1>
+        WE ARE THE APEX QUALITY SERVICE YOU DESERVE
+    </h1>
+    <h2>
+        Trust us to provide your home with a
+        cleaner appearance and healthier environment 
+    </h2>
+    <div class="cta-button-set">
+        <button class="cta-button" onclick="window.location.href='#services';">
+            <span class="circle" aria-hidden="true">
+                <!-- <span class="icon arrow"></span> -->
+            </span>
+            <span class="button-text">Learn More</span>
+        </button>
+        <button class="cta-button" onclick="window.location.href='#contact';">
+            <span class="circle" aria-hidden="true">
+                <!-- <span class="icon arrow"></span> -->
+            </span>
+            <span class="button-text">Contact Us</span>
+        </button>
+    </div>
+    <%- include('about') -%>
+    <%- include('services') -%>
+    <%- include('contact') -%>
+</body>
+<%- include('partials/footer') -%>
