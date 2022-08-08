@@ -35,3 +35,47 @@ function showPointer(event, id) {
 //   var thisLink = document.getElementById(id);
 //   thisLink.style.opacity = "0";
 // }
+
+const form = document.getElementById("contact-form");
+
+const formEvent = form.addEventListener("submit", (event) => {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let address = document.getElementById("address").value;
+  let message = document.getElementById("message").value;
+
+  event.preventDefault();
+
+  let formData = {
+    name: name,
+    email: email,
+    phone: phone,
+    address: address,
+    message: message
+  };
+
+  let xhr = new XMLHttpRequest();
+  xhr.open('POST', '/');
+  xhr.setRequestHeader('content-type', 'application/json');
+  xhr.onload = () => {
+    console.log(xhr.responseText);
+    name = '';
+    email = '';
+    phone = '';
+    address = '';
+    message = '';
+  }
+  xhr.send(JSON.stringify(formData));
+
+})
+
+const sendMail = (mail) => {
+  fetch("/", {
+    method: "post",
+    body: mail,
+  }).then((response) => {
+    console.log(response);
+    return response.json();
+  });
+};
