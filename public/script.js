@@ -26,16 +26,6 @@ function showPointer(event, id) {
   thisPointer.style.opacity = "1";
 }
 
-// function showLink(event, id) {
-//   var thisLink = document.getElementById(id);
-//   thisLink.style.opacity = "1";
-// }
-
-// function hideLink(event, id) {
-//   var thisLink = document.getElementById(id);
-//   thisLink.style.opacity = "0";
-// }
-
 const form = document.getElementById("contact-form");
 
 const formEvent = form.addEventListener("submit", (event) => {
